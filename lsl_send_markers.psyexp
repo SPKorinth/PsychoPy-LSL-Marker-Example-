@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="norm" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="first_test" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <TextComponent name="trial_fixation_cross">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="trial_fixation_cross" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.8" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <SoundComponent name="sound_stimulus">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="sound_stimulus" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$sound_name" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <CodeComponent name="lsl_send_marker">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="outlet.push_sample({&quot;x&quot;: [trigger_number]});&amp;#10;core.wait(0.005);&amp;#10;outlet.push_sample({&quot;x&quot;: [0]});&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="outlet.push_sample(x=[trigger_number])&amp;#10;core.wait(0.005)&amp;#10;outlet.push_sample(x=[0])&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="lsl_send_marker" valType="code"/>
+      </CodeComponent>
+      <KeyboardComponent name="response_key">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$corrAns" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="response_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.8" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="intro">
+      <TextComponent name="instruction_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="instruction_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Press space bar, when you hear the high pitched sound.&amp;#10;" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="go_button">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="go_button" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="outro">
+      <TextComponent name="bye">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="bye" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Thanks an bye!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="lsl_setup">
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="from pylsl import StreamInfo, StreamOutlet # import required classes&amp;#10;&amp;#10;info = StreamInfo(name='TriggerStreamA', type='Markers', channel_count=1, channel_format='int32', source_id='Example') # sets variables for object info&amp;#10;outlet = StreamOutlet(info) # initialize stream." valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import {StreamInfo, StreamOutlet} from 'pylsl';&amp;#10;var info, outlet;&amp;#10;info = new StreamInfo({&quot;name&quot;: &quot;TriggerStream&quot;, &quot;type&quot;: &quot;Markers&quot;, &quot;channel_count&quot;: 1, &quot;channel_format&quot;: &quot;int32&quot;, &quot;source_id&quot;: &quot;Example&quot;});&amp;#10;outlet = new StreamOutlet(info);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="isi">
+      <TextComponent name="isi_fixation_cross">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="isi_fixation_cross" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$jitter_number" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="lsl_setup"/>
+    <Routine name="intro"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('id_trial', 1), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.6), ('corrAns', 'space')]), OrderedDict([('id_trial', 2), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.57), ('corrAns', 'space')]), OrderedDict([('id_trial', 3), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.61), ('corrAns', 'space')]), OrderedDict([('id_trial', 4), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.23), ('corrAns', 'space')]), OrderedDict([('id_trial', 5), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.35), ('corrAns', 'space')]), OrderedDict([('id_trial', 6), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.65), ('corrAns', 'space')]), OrderedDict([('id_trial', 7), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.31), ('corrAns', 'space')]), OrderedDict([('id_trial', 8), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.31), ('corrAns', 'space')]), OrderedDict([('id_trial', 9), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.45), ('corrAns', 'space')]), OrderedDict([('id_trial', 10), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.5), ('corrAns', 'space')]), OrderedDict([('id_trial', 11), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.34), ('corrAns', 'space')]), OrderedDict([('id_trial', 12), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.34), ('corrAns', 'space')]), OrderedDict([('id_trial', 13), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.63), ('corrAns', 'space')]), OrderedDict([('id_trial', 14), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.5), ('corrAns', 'space')]), OrderedDict([('id_trial', 15), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.29), ('corrAns', 'space')]), OrderedDict([('id_trial', 16), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.54), ('corrAns', 'space')]), OrderedDict([('id_trial', 17), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.26), ('corrAns', 'space')]), OrderedDict([('id_trial', 18), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.39), ('corrAns', 'space')]), OrderedDict([('id_trial', 19), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.64), ('corrAns', 'space')]), OrderedDict([('id_trial', 20), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.3), ('corrAns', 'space')]), OrderedDict([('id_trial', 21), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.34), ('corrAns', 'space')]), OrderedDict([('id_trial', 22), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.79), ('corrAns', 'space')]), OrderedDict([('id_trial', 23), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.63), ('corrAns', 'space')]), OrderedDict([('id_trial', 24), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.33), ('corrAns', 'space')]), OrderedDict([('id_trial', 25), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.57), ('corrAns', 'space')]), OrderedDict([('id_trial', 26), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.39), ('corrAns', 'space')]), OrderedDict([('id_trial', 27), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.79), ('corrAns', 'space')]), OrderedDict([('id_trial', 28), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.8), ('corrAns', 'space')]), OrderedDict([('id_trial', 29), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.59), ('corrAns', 'space')]), OrderedDict([('id_trial', 30), ('sound_name', 'A'), ('trigger_number', 5), ('jitter_number', 0.27), ('corrAns', 'space')]), OrderedDict([('id_trial', 31), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.29), ('corrAns', None)]), OrderedDict([('id_trial', 32), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.4), ('corrAns', None)]), OrderedDict([('id_trial', 33), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 34), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.77), ('corrAns', None)]), OrderedDict([('id_trial', 35), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.56), ('corrAns', None)]), OrderedDict([('id_trial', 36), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.51), ('corrAns', None)]), OrderedDict([('id_trial', 37), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.75), ('corrAns', None)]), OrderedDict([('id_trial', 38), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.2), ('corrAns', None)]), OrderedDict([('id_trial', 39), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.7), ('corrAns', None)]), OrderedDict([('id_trial', 40), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.53), ('corrAns', None)]), OrderedDict([('id_trial', 41), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.21), ('corrAns', None)]), OrderedDict([('id_trial', 42), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.3), ('corrAns', None)]), OrderedDict([('id_trial', 43), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.51), ('corrAns', None)]), OrderedDict([('id_trial', 44), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 45), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.34), ('corrAns', None)]), OrderedDict([('id_trial', 46), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.49), ('corrAns', None)]), OrderedDict([('id_trial', 47), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.33), ('corrAns', None)]), OrderedDict([('id_trial', 48), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.25), ('corrAns', None)]), OrderedDict([('id_trial', 49), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 50), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.57), ('corrAns', None)]), OrderedDict([('id_trial', 51), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.61), ('corrAns', None)]), OrderedDict([('id_trial', 52), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.38), ('corrAns', None)]), OrderedDict([('id_trial', 53), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.53), ('corrAns', None)]), OrderedDict([('id_trial', 54), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.29), ('corrAns', None)]), OrderedDict([('id_trial', 55), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.45), ('corrAns', None)]), OrderedDict([('id_trial', 56), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.79), ('corrAns', None)]), OrderedDict([('id_trial', 57), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.56), ('corrAns', None)]), OrderedDict([('id_trial', 58), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.29), ('corrAns', None)]), OrderedDict([('id_trial', 59), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.79), ('corrAns', None)]), OrderedDict([('id_trial', 60), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.52), ('corrAns', None)]), OrderedDict([('id_trial', 61), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.5), ('corrAns', None)]), OrderedDict([('id_trial', 62), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.2), ('corrAns', None)]), OrderedDict([('id_trial', 63), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.3), ('corrAns', None)]), OrderedDict([('id_trial', 64), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.64), ('corrAns', None)]), OrderedDict([('id_trial', 65), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.61), ('corrAns', None)]), OrderedDict([('id_trial', 66), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.5), ('corrAns', None)]), OrderedDict([('id_trial', 67), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.74), ('corrAns', None)]), OrderedDict([('id_trial', 68), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.27), ('corrAns', None)]), OrderedDict([('id_trial', 69), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 70), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 71), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 72), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.26), ('corrAns', None)]), OrderedDict([('id_trial', 73), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.73), ('corrAns', None)]), OrderedDict([('id_trial', 74), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.34), ('corrAns', None)]), OrderedDict([('id_trial', 75), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.8), ('corrAns', None)]), OrderedDict([('id_trial', 76), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.64), ('corrAns', None)]), OrderedDict([('id_trial', 77), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.49), ('corrAns', None)]), OrderedDict([('id_trial', 78), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.5), ('corrAns', None)]), OrderedDict([('id_trial', 79), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 80), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.25), ('corrAns', None)]), OrderedDict([('id_trial', 81), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.47), ('corrAns', None)]), OrderedDict([('id_trial', 82), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.79), ('corrAns', None)]), OrderedDict([('id_trial', 83), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.71), ('corrAns', None)]), OrderedDict([('id_trial', 84), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.71), ('corrAns', None)]), OrderedDict([('id_trial', 85), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.2), ('corrAns', None)]), OrderedDict([('id_trial', 86), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.77), ('corrAns', None)]), OrderedDict([('id_trial', 87), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.78), ('corrAns', None)]), OrderedDict([('id_trial', 88), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.63), ('corrAns', None)]), OrderedDict([('id_trial', 89), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.36), ('corrAns', None)]), OrderedDict([('id_trial', 90), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 91), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 92), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.21), ('corrAns', None)]), OrderedDict([('id_trial', 93), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.75), ('corrAns', None)]), OrderedDict([('id_trial', 94), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 95), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.69), ('corrAns', None)]), OrderedDict([('id_trial', 96), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 97), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 98), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.39), ('corrAns', None)]), OrderedDict([('id_trial', 99), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 100), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 101), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.31), ('corrAns', None)]), OrderedDict([('id_trial', 102), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.37), ('corrAns', None)]), OrderedDict([('id_trial', 103), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.56), ('corrAns', None)]), OrderedDict([('id_trial', 104), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.24), ('corrAns', None)]), OrderedDict([('id_trial', 105), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.48), ('corrAns', None)]), OrderedDict([('id_trial', 106), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.74), ('corrAns', None)]), OrderedDict([('id_trial', 107), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.67), ('corrAns', None)]), OrderedDict([('id_trial', 108), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.31), ('corrAns', None)]), OrderedDict([('id_trial', 109), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.67), ('corrAns', None)]), OrderedDict([('id_trial', 110), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.41), ('corrAns', None)]), OrderedDict([('id_trial', 111), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 112), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.8), ('corrAns', None)]), OrderedDict([('id_trial', 113), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.76), ('corrAns', None)]), OrderedDict([('id_trial', 114), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.39), ('corrAns', None)]), OrderedDict([('id_trial', 115), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.56), ('corrAns', None)]), OrderedDict([('id_trial', 116), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.64), ('corrAns', None)]), OrderedDict([('id_trial', 117), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.57), ('corrAns', None)]), OrderedDict([('id_trial', 118), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.74), ('corrAns', None)]), OrderedDict([('id_trial', 119), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.41), ('corrAns', None)]), OrderedDict([('id_trial', 120), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 121), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.57), ('corrAns', None)]), OrderedDict([('id_trial', 122), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.73), ('corrAns', None)]), OrderedDict([('id_trial', 123), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.76), ('corrAns', None)]), OrderedDict([('id_trial', 124), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 125), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.73), ('corrAns', None)]), OrderedDict([('id_trial', 126), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 127), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 128), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.57), ('corrAns', None)]), OrderedDict([('id_trial', 129), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.7), ('corrAns', None)]), OrderedDict([('id_trial', 130), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.3), ('corrAns', None)]), OrderedDict([('id_trial', 131), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.25), ('corrAns', None)]), OrderedDict([('id_trial', 132), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 133), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.53), ('corrAns', None)]), OrderedDict([('id_trial', 134), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.38), ('corrAns', None)]), OrderedDict([('id_trial', 135), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.71), ('corrAns', None)]), OrderedDict([('id_trial', 136), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.56), ('corrAns', None)]), OrderedDict([('id_trial', 137), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.41), ('corrAns', None)]), OrderedDict([('id_trial', 138), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 139), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.44), ('corrAns', None)]), OrderedDict([('id_trial', 140), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.71), ('corrAns', None)]), OrderedDict([('id_trial', 141), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.45), ('corrAns', None)]), OrderedDict([('id_trial', 142), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.77), ('corrAns', None)]), OrderedDict([('id_trial', 143), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.55), ('corrAns', None)]), OrderedDict([('id_trial', 144), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.51), ('corrAns', None)]), OrderedDict([('id_trial', 145), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.8), ('corrAns', None)]), OrderedDict([('id_trial', 146), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.54), ('corrAns', None)]), OrderedDict([('id_trial', 147), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.28), ('corrAns', None)]), OrderedDict([('id_trial', 148), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.54), ('corrAns', None)]), OrderedDict([('id_trial', 149), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 150), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 151), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.44), ('corrAns', None)]), OrderedDict([('id_trial', 152), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.24), ('corrAns', None)]), OrderedDict([('id_trial', 153), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.3), ('corrAns', None)]), OrderedDict([('id_trial', 154), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.8), ('corrAns', None)]), OrderedDict([('id_trial', 155), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.76), ('corrAns', None)]), OrderedDict([('id_trial', 156), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 157), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.41), ('corrAns', None)]), OrderedDict([('id_trial', 158), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.75), ('corrAns', None)]), OrderedDict([('id_trial', 159), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.67), ('corrAns', None)]), OrderedDict([('id_trial', 160), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.24), ('corrAns', None)]), OrderedDict([('id_trial', 161), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.27), ('corrAns', None)]), OrderedDict([('id_trial', 162), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.24), ('corrAns', None)]), OrderedDict([('id_trial', 163), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.5), ('corrAns', None)]), OrderedDict([('id_trial', 164), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.61), ('corrAns', None)]), OrderedDict([('id_trial', 165), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.73), ('corrAns', None)]), OrderedDict([('id_trial', 166), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.55), ('corrAns', None)]), OrderedDict([('id_trial', 167), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.28), ('corrAns', None)]), OrderedDict([('id_trial', 168), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.28), ('corrAns', None)]), OrderedDict([('id_trial', 169), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.51), ('corrAns', None)]), OrderedDict([('id_trial', 170), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.3), ('corrAns', None)]), OrderedDict([('id_trial', 171), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.33), ('corrAns', None)]), OrderedDict([('id_trial', 172), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.25), ('corrAns', None)]), OrderedDict([('id_trial', 173), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 174), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 175), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.57), ('corrAns', None)]), OrderedDict([('id_trial', 176), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.54), ('corrAns', None)]), OrderedDict([('id_trial', 177), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 178), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.54), ('corrAns', None)]), OrderedDict([('id_trial', 179), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.6), ('corrAns', None)]), OrderedDict([('id_trial', 180), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.75), ('corrAns', None)]), OrderedDict([('id_trial', 181), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.21), ('corrAns', None)]), OrderedDict([('id_trial', 182), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 183), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.45), ('corrAns', None)]), OrderedDict([('id_trial', 184), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.33), ('corrAns', None)]), OrderedDict([('id_trial', 185), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.36), ('corrAns', None)]), OrderedDict([('id_trial', 186), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.32), ('corrAns', None)]), OrderedDict([('id_trial', 187), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.62), ('corrAns', None)]), OrderedDict([('id_trial', 188), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.35), ('corrAns', None)]), OrderedDict([('id_trial', 189), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.46), ('corrAns', None)]), OrderedDict([('id_trial', 190), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.75), ('corrAns', None)]), OrderedDict([('id_trial', 191), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.55), ('corrAns', None)]), OrderedDict([('id_trial', 192), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.63), ('corrAns', None)]), OrderedDict([('id_trial', 193), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.4), ('corrAns', None)]), OrderedDict([('id_trial', 194), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.72), ('corrAns', None)]), OrderedDict([('id_trial', 195), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.69), ('corrAns', None)]), OrderedDict([('id_trial', 196), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.65), ('corrAns', None)]), OrderedDict([('id_trial', 197), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.27), ('corrAns', None)]), OrderedDict([('id_trial', 198), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.51), ('corrAns', None)]), OrderedDict([('id_trial', 199), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.43), ('corrAns', None)]), OrderedDict([('id_trial', 200), ('sound_name', 'e'), ('trigger_number', 10), ('jitter_number', 0.28), ('corrAns', None)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli_file.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <Routine name="isi"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="outro"/>
+  </Flow>
+</PsychoPy2experiment>
